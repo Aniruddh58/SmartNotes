@@ -10,18 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          path: SmartNotes  # important fix
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 8.0.x
 
-      - name: Restore NuGet Packages
-        working-directory: backend
+      - name: Restore dependencies
+        working-directory: SmartNotes/backend/SmartNotes.Api
         run: dotnet restore
 
-      - name: Build Project
-        working-directory: backend
+      - name: Build project
+        working-directory: SmartNotes/backend/SmartNotes.Api
         run: dotnet build --no-restore
