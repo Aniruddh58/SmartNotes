@@ -19,9 +19,11 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        working-directory: frontend
+        working-directory: frontend/smartnotes-frontend
+
         run: npm install
 
       - name: Build Angular Project
-        working-directory: frontend
+       working-directory: frontend/smartnotes-frontend
+
         run: npm run build
