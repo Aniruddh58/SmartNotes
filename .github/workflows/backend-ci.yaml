@@ -1,0 +1,27 @@
+name: .NET API CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore NuGet Packages
+        working-directory: backend
+        run: dotnet restore
+
+      - name: Build Project
+        working-directory: backend
+        run: dotnet build --no-restore
