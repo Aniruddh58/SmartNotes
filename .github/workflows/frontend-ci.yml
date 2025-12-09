@@ -1,4 +1,4 @@
-name: Angular CI
+name: Frontend CI
 
 on:
   push:
@@ -22,6 +22,6 @@ jobs:
         working-directory: frontend/smartnotes-frontend
         run: npm install
 
-      - name: Build Angular Project
+      - name: Build Angular App
         working-directory: frontend/smartnotes-frontend
         run: npm run build
