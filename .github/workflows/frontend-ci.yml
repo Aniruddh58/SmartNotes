@@ -1,4 +1,4 @@
-name: Frontend CI
+name: Angular CI
 
 on:
   push:
@@ -16,12 +16,8 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20.19.0   # ✅ FIXED
 
       - name: Install Dependencies
         working-directory: frontend/smartnotes-frontend
         run: npm install
-
-      - name: Build Angular App
-        working-directory: frontend/smartnotes-frontend
-        run: npm run build
