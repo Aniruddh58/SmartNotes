@@ -16,8 +16,12 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20.19.0   # ✅ FIXED
+          node-version: 20.19.0
 
       - name: Install Dependencies
         working-directory: frontend/smartnotes-frontend
         run: npm install
+
+      - name: Build Angular Project
+        working-directory: frontend/smartnotes-frontend
+        run: npm run build
