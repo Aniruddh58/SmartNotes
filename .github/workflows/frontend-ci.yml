@@ -20,10 +20,8 @@ jobs:
 
       - name: Install Dependencies
         working-directory: frontend/smartnotes-frontend
-
         run: npm install
 
       - name: Build Angular Project
-       working-directory: frontend/smartnotes-frontend
-
+        working-directory: frontend/smartnotes-frontend
         run: npm run build
