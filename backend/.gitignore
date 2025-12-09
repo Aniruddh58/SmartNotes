@@ -1,0 +1,37 @@
+# =========================
+# BUILD OUTPUTS
+# =========================
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# =========================
+# VISUAL STUDIO
+# =========================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# =========================
+# VISUAL STUDIO CACHES
+# =========================
+CopilotIndices/
+DesignTimeBuild/
+FileContentIndex/
+*.db
+*.db-shm
+*.db-wal
+.futdcache.v2
+.dtbcache.v2
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
